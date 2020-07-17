@@ -1,0 +1,231 @@
+.card {
+  background-color: $primary-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 28px;
+  padding: 24px;
+  align-items: stretch;
+  position: relative;
+
+  &--edit {
+    box-shadow: $box-shadow;
+    .card__menu {
+      display: none;
+    }
+
+    .card__button {
+      max-height: 50px;
+      overflow: hidden;
+      opacity: 1;
+    }
+  }
+}
+
+.card__menu-icon {
+  position: absolute;
+  top: 15px;
+  right: 24px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.card__menu-icon i {
+  font-size: 20px;
+  color: $bg-secondary-color;
+}
+
+.card__menu {
+  position: absolute;
+  top: 38px;
+  right: -120px;
+  z-index: 10;
+  max-height: 0px;
+  overflow: hidden;
+  opacity: 0;
+
+  &--show {
+    transition: all 0.4s ease;
+    opacity: 1;
+    max-height: 100px;
+  }
+}
+
+.card-menu {
+  background: $bg-primary-color;
+  border-radius: 20px;
+  list-style: none;
+  padding: 14px 10px;
+  margin: 0;
+}
+
+.card-menu li {
+  background: transparent;
+  border-radius: 52px;
+  padding: 9px 15px;
+  color: $default-color;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+
+  svg {
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  &:hover,
+  &:focus {
+    background: $main-color;
+  }
+}
+
+.card__img {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  // align-items: center;
+}
+.card-img {
+  height: 145px;
+  width: 145px;
+  border-radius: 50%;
+  background-color: $default-color;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  color: $neutral-color;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.card__title {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  color: $bg-secondary-color;
+  padding: 15px;
+  input {
+    flex: 1 0;
+    margin: 0;
+    width: 162px;
+    color: $bg-secondary-color;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-family: $fontFamily;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    cursor: default;
+  }
+}
+
+.card__icons {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  color: $bg-secondary-color;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.card-icon {
+  width: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.card__info {
+  display: flex;
+  background-color: $secondary-color;
+  border-radius: 58px;
+  padding: 10px 10px;
+  justify-content: space-between;
+
+  input {
+    width: 40px;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    color: #333333;
+    outline: none;
+    text-transform: uppercase;
+    cursor: default;
+  }
+}
+
+
+.card__list {
+  padding: 10px 6px;
+}
+
+.property {
+  display: flex;
+  padding: 6px 0;
+  color: $bg-secondary-color;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.property__input {
+  flex: 1 0;
+  margin: 0;
+  width: 110px;
+  color: $bg-secondary-color;
+  background-color: transparent;
+  border: none;
+  font-family: $fontFamily;
+  font-size: 15px;
+  line-height: 18px;
+  padding-left: 5px;
+  outline: none;
+  cursor: default;
+}
+
+.card__button {
+  text-align: center;
+  max-height: 0px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.save-button {
+  background: $main-color;
+  border-radius: 33px;
+  font-family: $fontFamily;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: $default-color;
+  border: none;
+  padding: 10px 24px;
+  outline: none;
+  cursor: pointer;
+  transition: all .4s ease;
+
+  &--empty {
+    background-color: $neutral-text-color;
+  }
+}
+.card input {
+  cursor: auto;
+}

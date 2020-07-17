@@ -1,0 +1,89 @@
+.info-card {
+  background: $bg-primary-color;
+  border-radius: 28px 28px 0 0;
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  padding: 34px 20px 38px 28px;
+  width: 506px;
+  transition: all 0.4s ease;
+
+  &--hide {
+    bottom: -130px;
+
+    .info-card__close {
+      transform: rotate(405deg);
+    }
+  }
+}
+
+.info-card__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: $default-color;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.info-card__head {
+  font-size: 50px;
+  color: $default-color;
+  padding-left: 9px;
+  padding-bottom: 10px;
+}
+
+.info-card__head span {
+  font-size: 20px;
+}
+
+.info-card__main {
+  display: flex;
+}
+
+.info-card__progress-bar {
+  flex: 1;
+  background: $bg-secondary-color;
+  border-radius: 35px;
+  overflow: hidden;
+  border: 4px solid $bg-secondary-color;
+}
+
+.info-card__progress-line {
+  background: $primary-color;
+  border-radius: 35px;
+  height: 100%;
+  width: 75%;
+  transition: width 2s ease;
+}
+
+.info-card__button {
+  margin-left: 23px;
+}
+
+.info-button {
+  background: $bg-secondary-color;
+  border-radius: 35px;
+  font-family: $fontFamily;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  border: none;
+  padding: 9px 18px;
+  color: $default-color;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.4s ease;
+
+  &:hover {
+    background: $default-color;
+    color: $bg-secondary-color;
+  }
+}

@@ -1,26 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import {Main} from './pages/Main';
+import {Giraffes} from './pages/Giraffes';
+
+import { Aside } from "./components/Aside";
+import { DatabaseState } from './context/database/DatabaseState';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    
+    return (
+      <DatabaseState>
+        <BrowserRouter>
+        <div className="container">
+            <Aside />
+            <Switch>
+                <Route path={'/'} exact component={Giraffes} />
+                <Route path={'/main'}  component={Main} />
+                <Route path={'/manage'}  component={Main} />
+                <Route path={'/giraffes'}  component={Giraffes} />
+                <Route path={'/stuff'}  component={Main} />
+                <Route path={'/options'}  component={Main} />
+                <Route path={'/support'}  component={Main} />
+            </Switch>   
+        </div>
+        </BrowserRouter>
+      </DatabaseState>
+    );
 }
 
 export default App;

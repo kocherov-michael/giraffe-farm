@@ -1,0 +1,55 @@
+.animals-wrapper {
+  position: relative;
+  padding-bottom: 15px;
+}
+.animals {
+  transform: rotate(180deg) scaleX(-1);
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin-left: -50px;
+  padding-left: 50px;
+  margin-right: -50px;
+}
+
+.animals__container {
+  padding-top: 100px;
+  padding-bottom: 20px;
+  display: flex;
+  transform: rotate(180deg) scaleX(-1);
+}
+
+.animals__item {
+  margin-right: 30px;
+}
+.title {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+}
+.title__name {
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 37px;
+  color: $main-color;
+}
+.title__icon {
+  height: 37px;
+  width: 37px;
+  color: $default-color;
+  background: $bg-primary-color;
+  border-radius: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  margin-left: 15px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+
+  &:hover {
+    background: $text-accent-color;
+  }
+}

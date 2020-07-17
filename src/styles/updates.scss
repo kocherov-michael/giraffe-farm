@@ -1,0 +1,104 @@
+.update-card {
+  display: inline-block;
+  background: $default-color;
+  box-shadow: $box-shadow;
+  border-radius: 28px;
+  padding: 21px 32px;
+  width: 500px;
+  opacity: 1;
+  max-height: 500px;
+  transition: all 0.4s ease;
+  &--hide {
+    max-height: 0;
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+    opacity: 0;
+  }
+}
+
+.update-card__header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5px;
+}
+
+.update-card__close {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  color: $bg-secondary-color;
+}
+
+.hr {
+  background: $neutral-color;
+  border-radius: 2px;
+  height: 3px;
+}
+
+.table-head {
+  display: flex;
+  color: $neutral-text-color;
+  font-size: 12px;
+  line-height: 14px;
+  padding-top: 8px;
+  padding-bottom: 4px;
+}
+
+.table-row {
+  display: flex;
+  font-size: 12px;
+  line-height: 14px;
+  color: $bg-secondary-color;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-top: 1px solid $neutral-color;
+  align-items: center;
+}
+
+.date-column {
+  flex: 1 0 110px;
+}
+
+.action-column {
+  flex: 1 0 120px;
+}
+
+.name-column {
+  flex: 1 0 100px;
+}
+
+.status-column {
+  flex: 1 0 110px;
+}
+
+.table-status {
+  color: $status-color;
+  padding: 6px 10px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.table-row .name-column {
+  flex: 1 0 90px;
+}
+
+.table-row .status-column {
+  flex: 1 0 120px;
+}
+
+.wait {
+  background-color: $info-color;
+}
+
+.done {
+  background-color: $success-color;
+}
+
+.unconfirmed {
+  background: $rejected-color;
+}
+
+.rejected {
+  background: $danger-color;
+}
